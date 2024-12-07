@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyntax</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <img src="images/logo.png" alt="Zyntax Logo" class="logo"> <!-- Logo image here -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#whatwedo">What We Do</a></li>
+                <li><a href="#projects">Our Projects</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Transforming the world of fashion</h1>
+            <p>Discover our latest collections and trends.</p>
+            <a href="#projects" class="cta">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="whatwedo" class="whatwedo">
+        <h2>What We Do?</h2>
+        <p>We deliver sustainable, high-quality apparel that embodies contemporary style.</p>
+        <div class="features">
+            <div class="feature-item">Sustainable Materials</div>
+            <div class="feature-item">Unique Designs</div>
+            <div class="feature-item">Craftsmanship</div>
+        </div>
+    </section>
+
+    <!-- Our Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Our Projects</h2>
+        <div class="clothing-grid">
+            <div class="item" style="background-image: url('images/shirt.png')">
+                <h3>Shirts</h3>
+            </div>
+            <div class="item" style="background-image: url('images/tshirt.png')">
+                <h3>T-shirts</h3>
+            </div>
+            <div class="item" style="background-image: url('images/hoodie.png')">
+                <h3>Hoodies</h3>
+            </div>
+            <div class="item" style="background-image: url('images/pants.png')">
+                <h3>Pants</h3>
+            </div>
+            <div class="item" style="background-image: url('images/jeans.png')">
+                <h3>Jeans</h3>
+            </div>
+            <div class="item" style="background-image: url('images/cargo.png')">
+                <h3>Cargo Pants</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <br>
+        <p>Zyntax is a pioneering clothing brand dedicated to merging style with sustainability. Our mission is to offer high-quality, eco-friendly apparel that empowers individuals to express their unique identities. Each piece in our collection is crafted using ethically sourced materials, ensuring that fashion is both fashionable and responsible.
+            At Zyntax, we celebrate creativity, diversity, and authenticity. Our designs reflect modern trends while prioritizing comfort and durability. Join us on our journey to redefine fashion, one sustainable choice at a time.</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Image Modal with Navigation -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="navigation">
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Zyntax. All rights reserved.</p>
+        <!-- <p>Email: <a href="mailto:zyntax01@gmail.com">zyntax01@gmail.com</a></p>
+        <div class="social-media">
+            <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram" class="social-icon"> Instagram</a>
+            <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter" class="social-icon"> Twitter</a>
+            <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook" class="social-icon"> Facebook</a>
+        </div> -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
