@@ -59,3 +59,38 @@ nextButton.addEventListener('click', function() {
 function showImage(category, index) {
     modalImg.src = imageSets[category][index];
 }
+document.getElementById('send-email').addEventListener('click', function() {
+    // Get form values
+    const name = document.getElementById('name').value.trim();
+    const company = document.getElementById('company').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Validate the form fields
+    if (!name) {
+        alert('Please enter your name.');
+        return;
+    }
+    if (!company) {
+        alert('Please enter your company name.');
+        return;
+    }
+    if (!email) {
+        alert('Please enter your email.');
+        return;
+    }
+    if (!message) {
+        alert('Please enter your message.');
+        return;
+    }
+
+    // Construct the mailto link
+    const subject = encodeURIComponent(`New Message from ${name}`);
+    const body = encodeURIComponent(
+        `Name: ${name}\nCompany: ${company}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+    const mailtoLink = `mailto:zyntex78@gmail.com?subject=${subject}&body=${body}`;
+
+    // Open the mailto link
+    window.location.href = mailtoLink;
+});
