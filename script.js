@@ -59,7 +59,7 @@ nextButton.addEventListener('click', function() {
 function showImage(category, index) {
     modalImg.src = imageSets[category][index];
 }
-document.getElementById('send-email').addEventListener('click', function() {
+document.getElementById('send-email').addEventListener('click', function () {
     // Get form values
     const name = document.getElementById('name').value.trim();
     const company = document.getElementById('company').value.trim();
@@ -68,29 +68,52 @@ document.getElementById('send-email').addEventListener('click', function() {
 
     // Validate the form fields
     if (!name) {
-        alert('Please enter your name.');
+        alert('Name is required!');
         return;
     }
     if (!company) {
-        alert('Please enter your company name.');
+        alert('Company name is required!');
         return;
     }
     if (!email) {
-        alert('Please enter your email.');
+        alert('Email is required!');
         return;
     }
     if (!message) {
-        alert('Please enter your message.');
+        alert('Please enter your message!');
         return;
     }
 
     // Construct the mailto link
-    const subject = encodeURIComponent(`New Message from ${name}`);
+    const recipient = `zyntex78@gmail.com`; // Ensure only plain email address is used
+    const subject = encodeURIComponent(`Message from Contact Form`);
     const body = encodeURIComponent(
-        `Name: ${name}\nCompany: ${company}\nEmail: ${email}\n\nMessage:\n${message}`
+        `Here are the details:\n\nName: ${name}\nCompany: ${company}\nEmail: ${email}\n\nMessage:\n${message}`
     );
-    const mailtoLink = `mailto:zyntex78@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
 
     // Open the mailto link
     window.location.href = mailtoLink;
+});
+
+document.addEventListener('mousemove', function(e) {
+    const cursor = document.querySelector('.cursor');
+    const cursorInner = document.querySelector('.cursor-inner');
+    
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+    
+    cursorInner.style.left = e.clientX + 'px';
+    cursorInner.style.top = e.clientY + 'px';
+});
+let lastScrollY = window.scrollY;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY) {
+        header.style.top = "-80px"; 
+    } else {
+        header.style.top = "0";
+    }
+    lastScrollY = window.scrollY;
 });
